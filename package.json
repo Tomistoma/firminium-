@@ -3,16 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.3.0",
     "react-particles": "^2.12.2",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "tslib": "^2.6.1",
     "tsparticles": "^2.12.0",
     "tsparticles-engine": "^2.12.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nodemon server.js",
+    "starts": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -31,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
   }
 }

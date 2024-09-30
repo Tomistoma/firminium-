@@ -1,0 +1,264 @@
+/* General Styles remain the same */
+
+/* Z-index Fixes for Sections */
+.hero-head, .pricing-section, .server-pricing, .service-packages, .additional-services {
+    position: relative;
+    z-index: 1;
+  }
+  .tit{
+    font-size: 3em;
+  }
+  
+  /* Pricing Section with 3 Packages Aligned Horizontally */
+  .pricing-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;  /* Keep the packages in a row */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 20px; /* Add spacing between the cards */
+  }
+  
+  .about-section {
+    background-color: rgba(40, 44, 52, 0.95);  /* Slightly transparent dark background */
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFD700;  /* Add yellow color to match the theme */
+}
+  .pricing-card {
+    background-color: rgba(40, 44, 52, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30%; /* Keep all cards equal size and fit in a row */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .recommended {
+    border: 2px solid #FFD700;
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.4);
+  }
+  
+  .pricing-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 2.5em;
+    color: #FFD700;
+    margin-bottom: 20px;
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .features li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-icon {
+    color: #FFD700;
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  .cta-button {
+    background-color: #FFD700;
+    color: #282c34;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #FFC300;
+    transform: translateY(-3px);
+  }
+  
+  /* Extended Service Packages */
+  .service-packages {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .package-cards-centered {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Make sure the cards wrap on smaller screens */
+  }
+  
+  .package-card-centered {
+    background-color: rgba(40, 44, 52, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .package-price {
+    font-size: 2.5em;
+    color: #FFD700;
+    margin-bottom: 10px;
+  }
+  
+  .package-features-centered {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .package-features-centered li {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  /* Package Cards */
+  .package-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .package-card {
+    background-color: rgba(40, 44, 52, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 45%; /* Make them bigger and evenly spaced */
+    text-align: center;
+  }
+  
+  .package-price {
+    font-size: 2.5em;
+    color: #FFD700;
+    margin-bottom: 10px;
+  }
+  
+  .package-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .package-features li {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  /* Redesigned Additional Services Section */
+  .additional-services {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px 0;
+    background-color: rgba(40, 44, 52, 0.9);
+    border-radius: 10px;
+  }
+  
+  .additional-cards-centered {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: rgba(40, 44, 52, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .service-icon {
+    font-size: 2.5em;
+    color: #FFD700;
+    margin-bottom: 15px;
+  }
+  
+  .service-price {
+    font-size: 1.8em;
+    color: #FFD700;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pricing-section, .package-cards, .package-cards-centered, .additional-cards-centered {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pricing-card, .package-card, .package-card-centered, .service-card {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Server Pricing Section */
+.server-pricing {
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgba(40, 44, 52, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .server-text {
+    font-size: 1.5em;
+    color: #FFD700;
+  }
+  
+  .server-price {
+    font-weight: bold;
+  }
+  
+  .note {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  

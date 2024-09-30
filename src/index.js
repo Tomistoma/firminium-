@@ -1,18 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import App from './App';
+import { createRoot } from 'react-dom/client'; 
+import Pricing from './Pricing';
+import Contact from './Contact';
+import About from './About';
+import './Styles/Main.css'; // Import the main CSS file
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const container = document.getElementById('root');
+const root = createRoot(container);
 
 root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
+  <HelmetProvider> 
+  <Router>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  </Router>
+  </HelmetProvider>
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

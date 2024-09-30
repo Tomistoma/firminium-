@@ -9,7 +9,7 @@
         "mode": "push"
       },
       "onHover": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "resize": true
@@ -26,10 +26,10 @@
   },
   "particles": {
     "color": {
-      "value": "#ffffff"
+      "value": "#FFFFFF"
     },
     "links": {
-      "color": "#ffffff",
+      "color": "#FFDEAD",
       "distance": 150,
       "enable": true,
       "opacity": 0.5,
@@ -45,7 +45,7 @@
         "default": "bounce"
       },
       "random": false,
-      "speed": 6,
+      "speed": 2,
       "straight": false
     },
     "number": {
