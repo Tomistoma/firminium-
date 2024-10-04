@@ -1,4 +1,8 @@
 /* General Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body, html {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -167,6 +171,7 @@ body, html {
   .wide-box h3 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: #fff; 
   }
   
   .wide-box p {
@@ -174,7 +179,9 @@ body, html {
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
-  }
+    color: #fff; /* Ensure the text is white */
+}
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -190,6 +197,7 @@ body, html {
   
     .wide-box-content {
       width: 90%;
+      color: white;
     }
   
     .wide-box h3 {

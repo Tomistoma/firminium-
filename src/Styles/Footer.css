@@ -1,4 +1,8 @@
 /* Footer Section */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .footer {
     background: linear-gradient(135deg, rgba(40, 44, 52, 1) 0%, rgba(40, 44, 52, 0.8) 100%);
     color: rgba(255, 255, 255, 0.85); /* Brighter text for better contrast */

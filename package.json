@@ -3,9 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.1",
+    "@nextui-org/react": "^2.4.8",
+    "@radix-ui/react-accordion": "^1.2.0",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-icons": "^1.3.0",
     "axios": "^1.7.7",
     "body-parser": "^1.20.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.0",
     "cors": "^2.8.5",
+    "framer-motion": "^11.11.1",
+    "lucide-react": "^0.446.0",
     "nodemailer": "^6.9.15",
     "nodemon": "^3.1.7",
     "react": "^18.2.0",
@@ -14,14 +27,18 @@
     "react-icons": "^5.3.0",
     "react-particles": "^2.12.2",
     "react-router-dom": "^6.26.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^3.0.1",
+    "recharts": "^2.12.7",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
     "tslib": "^2.6.1",
     "tsparticles": "^2.12.0",
-    "tsparticles-engine": "^2.12.0"
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-updater-wobble": "^2.12.0"
   },
   "scripts": {
     "start": "nodemon server.js",
-    "starts": "react-scripts start",
+    "starts": "webpack serve --mode development --open",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,6 +59,20 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.13"
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.2"
   }
 }

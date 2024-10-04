@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import Particles from "react-particles";
+import {motion} from "framer-motion"
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 import './Styles/Contact.css';
@@ -167,18 +168,27 @@ const handleSubmit = async (e) => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="need">Potřebujete</label>
+                        <label htmlFor="need">Představa</label>
                         <textarea
                             id="need"
                             name="need"
                             value={formData.need}
                             onChange={handleInputChange}
-                            placeholder="Popište vaše potřeby..."
+                            placeholder="Stručně popište vaše představy..."
                         />
                         {errors.need && <p className="error-message">{errors.need}</p>}
                     </div>
+                    <motion.button
+        className="submit-button"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        type="submit"  // This ensures it acts as a submit button
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    >
+        Odeslat
+    </motion.button>
 
-                    <button type="submit" className="submit-button">Odeslat</button>
+                
                 </form>
             </div>
 

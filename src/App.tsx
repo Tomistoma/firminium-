@@ -3,6 +3,7 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import './Styles/Main.css';
 import particlesOptions from "./particles.json";
+import {motion} from "framer-motion"
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -23,7 +24,17 @@ function App() {
             <div className='hero-head'>
                 <h1>Profesionální webové stránky pro malé podnikatele</h1>
                 <p>Ideální pro živnostníky, startupy, malé firmy a kohokoliv, kdo se chce přidat na online trh.</p>
-                <a href="/contact" className="cta-button">Nezávazně poptat</a>
+                
+                <motion.button
+        className="cta-button"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => window.location.href = '/contact'}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    >
+        Nezávazně poptat
+    </motion.button>
+              
             </div>
 
             {/* 5 Quality Boxes Section */}
@@ -32,7 +43,7 @@ function App() {
                     <div className="box-content">
                         <FaRocket className="box-icon" />  {/* Speed Icon */}
                         <h3>Rychlost</h3>
-                        <p>Rychle nasazené webové stránky pro rychlé dosažení vašich cílů.</p>
+                        <p>Rychle nasazené webové stránky pro rychlé spuštění vaší prezentace.</p>
                     </div>
                 </div>
 
@@ -56,7 +67,7 @@ function App() {
                     <div className="box-content">
                         <FaShieldAlt className="box-icon" />  {/* Security Icon */}
                         <h3>Bezpečnost</h3>
-                        <p>Vaše webové stránky budou zabezpečené a chráněné proti útokům.</p>
+                        <p>Vaše webové stránky budou zabezpečené a chráněné proti útokům hackerů.</p>
                     </div>
                 </div>
             </div>

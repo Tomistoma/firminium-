@@ -1,5 +1,7 @@
 /* General Styles remain the same */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Z-index Fixes for Sections */
 .hero-head, .pricing-section, .server-pricing, .service-packages, .additional-services {
     position: relative;
@@ -73,6 +75,7 @@
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+    font-size: small;
   }
   
   .features li {
@@ -207,6 +210,10 @@
     padding: 30px;
     width: 250px;
     text-align: center;
+    display: flex;           /* Apply flexbox to the service card */
+    flex-direction: column;  /* Stack content vertically */
+    justify-content: center-start; /* Center vertically */
+    align-items: center;     /* Center horizontally */
   }
   
   .service-icon {
@@ -249,6 +256,7 @@
   }
   
   .server-text {
+    
     font-size: 1.5em;
     color: #FFD700;
   }
