@@ -5,7 +5,6 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
-const PORT = 5000;
 
 // Configure CORS to allow requests from the React app running on localhost:3000
 app.use(cors({
@@ -72,7 +71,9 @@ app.get('*', (req, res) => {
 });
 
 
-// Start the server
+// Use the port from the environment variable, or fallback to 5000 if running locally
+const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
