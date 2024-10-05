@@ -9,7 +9,7 @@ const PORT = 5000;
 
 // Configure CORS to allow requests from the React app running on localhost:3000
 app.use(cors({
-  origin: ['http://localhost:9000', 'http://127.0.0.1:9000'], // Frontend origins
+  origin: ['http://localhost:5000', 'http://127.0.0.1:5000'], // Frontend origins
   methods: 'GET, POST', // Allowed HTTP methods
   credentials: true // Allow credentials if needed
 }));
