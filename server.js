@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const app = express();
 const PORT = 5000;
@@ -61,6 +62,15 @@ app.post('/send-email', (req, res) => {
     }
   });
 });
+
+// Serve static files from the React app's build directory
+app.use(express.static(path.join(__dirname, 'build')));
+
+// If no matching route is found, serve the React app's index.html file
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 // Start the server
 app.listen(PORT, () => {
