@@ -7,9 +7,11 @@
   --teal-light: white;
   --text-color: #282b33;
   --logo-color: #282b33;
+  
 }
 
 .navbar {
+  font-family: 'Montserrat', sans-serif;
   position: fixed;
   top: 0;
   width: 100%;

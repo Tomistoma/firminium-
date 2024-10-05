@@ -5,10 +5,9 @@ import particlesOptions from "./particles.json";
 import './Styles/About.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import type { Engine } from 'tsparticles-engine'; 
 
 function About() {
-    const particlesInit = useCallback((main: Engine) => {
+    const particlesInit = useCallback(main => {
         loadFull(main);
     }, []);
 

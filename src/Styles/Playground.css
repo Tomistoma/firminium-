@@ -2,30 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap'); /* Import Montserrat */
 
+/* Set Montserrat as the default font */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #282c34;
+    color: #fff; /* Default text color */
+}
+
+/* Customize specific elements */
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #FFD700;  /* Add yellow color to match the theme */
+    color: #FFD700;  /* Yellow color to match the theme */
 }
-
-.escape-container {
-    height: 400px; /* Smaller container */
-    width: 400px;  /* Smaller container */
-    position: relative;
-    border: 2px solid black; /* Visual border */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .escape-button {
-    position: absolute;
-    padding: 15px 25px;
-    font-size: 16px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, top 0.3s ease, left 0.3s ease;
-  }
-  

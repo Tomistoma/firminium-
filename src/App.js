@@ -58,7 +58,7 @@ function App() {
                 <div className="box">
                     <div className="box-content">
                         <FaSearch className="box-icon" /> {/* SEO Icon */}
-                        <h3>SEO optimalizace</h3>
+                        <h3>SEO </h3>
                         <p>Optimalizace pro vyhledávače, aby váš web byl snadno k nalezení na Googlu.</p>
                     </div>
                 </div>

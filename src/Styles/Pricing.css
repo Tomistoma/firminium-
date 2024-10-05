@@ -9,6 +9,7 @@
   }
   .tit{
     font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
   }
   
   /* Pricing Section with 3 Packages Aligned Horizontally */
@@ -39,6 +40,7 @@
     color: #FFD700;  /* Add yellow color to match the theme */
 }
   .pricing-card {
+    font-family: 'Montserrat', sans-serif;
     background-color: rgba(40, 44, 52, 1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;

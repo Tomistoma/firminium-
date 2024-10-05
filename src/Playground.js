@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import { Slider, Box, Typography, Paper, Button } from '@mui/material';
+import { Slider, Box, Paper } from '@mui/material';
 
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -11,7 +11,6 @@ const Playground = () => {
   const [position, setPosition] = useState({ top: '50%', left: '50%' });
   const [amt1, setAmt1] = useState(100); // Annual Investment Amount
   const [int1, setInt1] = useState(5);   // Annual Interest Rate
-  const [color, setColor ] = useState("success")
 
   // Function to generate a random position within the container's bounds
   const moveButton = () => {
@@ -19,8 +18,6 @@ const Playground = () => {
     const newLeft = Math.random() * 90 + '%'; // Random position within 90% of container width
     setPosition({ top: newTop, left: newLeft });
   };
-
- 
 
   // Initial data for radar chart
   const [radarData, setRadarData] = useState([
@@ -36,6 +33,7 @@ const Playground = () => {
   const handleSliderChange = (event, newValue) => {
     setAmt1(newValue);
   };
+
   const handleSliderChange2 = (event, newValue) => {
     setInt1(newValue);
   };
@@ -70,14 +68,12 @@ const Playground = () => {
       <Navbar />
 
       {/* Investment Department */}
-      <Paper elevation={3} sx={{ padding: 3, margin: '50px', textAlign: 'center', marginTop: '150px', opacity: 0.7 }}>
-        <Typography variant="h5" gutterBottom>
-          Investiční Simulátor
-        </Typography>
+      <Paper elevation={3} style={{ padding: '24px', margin: '50px', textAlign: 'center', marginTop: '150px', opacity: 0.7 }}>
+        <h5>Investiční Simulátor</h5>
 
-        <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', marginTop: '30px' }}>
+        <Box style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', marginTop: '30px' }}>
           {/* Line Chart */}
-          <Box sx={{ width: '60%' }}>
+          <Box style={{ width: '60%' }}>
             <LineChart width={600} height={300} data={data} margin={{ top: 50, right: 20, bottom: 5, left: 0 }}>
               <Line type="monotone" dataKey="hodnota" stroke="#8884d8" />
               <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -88,10 +84,8 @@ const Playground = () => {
           </Box>
 
           {/* Controls */}
-          <Box sx={{ width: '30%' }}>
-            <Typography variant="h6" gutterBottom>
-              Parametry Investice
-            </Typography>
+          <Box style={{ width: '30%' }}>
+            <h6>Parametry Investice</h6>
 
             {/* Investment Amount Slider */}
             <Slider
@@ -103,7 +97,7 @@ const Playground = () => {
               min={0}
               max={1000}
             />
-            <Typography variant="body1">Roční investice: {amt1} Kč</Typography>
+            <p>Roční investice: {amt1} Kč</p>
 
             {/* Interest Rate Slider */}
             <Slider
@@ -115,26 +109,22 @@ const Playground = () => {
               min={0}
               max={15}
             />
-            <Typography variant="body1">Roční úrok: {int1} %</Typography>
+            <p>Roční úrok: {int1} %</p>
           </Box>
         </Box>
       </Paper>
 
       {/* Radar Chart Section */}
-      <Paper elevation={3} sx={{ padding: 3, margin: '50px', textAlign: 'center', marginTop: '50px', opacity: 0.7 }}>
-        <Typography variant="h6" gutterBottom>
-          Příklad grafu
-        </Typography>
+      <Paper elevation={3} style={{ padding: '24px', margin: '50px', textAlign: 'center', marginTop: '50px', opacity: 0.7 }}>
+        <h6>Příklad grafu</h6>
 
-        <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+        <Box style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
           {/* Sliders for radar chart values */}
-          <Box sx={{ width: '30%' }}>
-            <Typography variant="h6" gutterBottom>
-              Nastavení Radarových Hodnot
-            </Typography>
+          <Box style={{ width: '30%' }}>
+            <h6>Nastavení Radarových Hodnot</h6>
             {radarData.map((subject, index) => (
-              <Box key={index} sx={{ marginBottom: '20px' }}>
-                <Typography variant="body1">{subject.subject}: {subject.A}</Typography>
+              <Box key={index} style={{ marginBottom: '20px' }}>
+                <p>{subject.subject}: {subject.A}</p>
                 <Slider
                   size="small"
                   value={subject.A}
@@ -149,7 +139,7 @@ const Playground = () => {
           </Box>
 
           {/* Radar Chart */}
-          <Box sx={{ height: 400, width: '60%' }}>
+          <Box style={{ height: 400, width: '60%' }}>
             <ResponsiveContainer>
               <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
                 <PolarGrid />
@@ -161,7 +151,8 @@ const Playground = () => {
           </Box>
         </Box>
       </Paper>
-     <Footer />
+
+      <Footer />
     </div>
   );
 };
