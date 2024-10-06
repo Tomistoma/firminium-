@@ -253,7 +253,6 @@ const handleSubmit = async (e) => {
         whileTap={{ scale: 0.9 }}
         type="submit"  // This ensures it acts as a submit button
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        onClick={handleClick}
     >
         Odeslat
     </motion.button>
