@@ -8,6 +8,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /* Ensure that particles are in the background */
@@ -25,6 +26,7 @@ body, html {
 .App {
     position: relative;
     z-index: 1; /* Content should be above particles */
+    
 }
 
 /* About Section */
@@ -33,7 +35,7 @@ body, html {
     padding: 40px;
     max-width: 800px;
     margin: 40px auto;
-    text-align: center;
+    text-align: justify;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     color: white;

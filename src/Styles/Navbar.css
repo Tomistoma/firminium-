@@ -1,13 +1,10 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
 
 :root {
   --teal-color: #FFD700;
   --teal-light: white;
   --text-color: #282b33;
   --logo-color: #282b33;
-  
 }
 
 .navbar {
@@ -19,7 +16,7 @@
   background-color: var(--teal-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between; /* Align logo and menu */
+  justify-content: space-between;
   align-items: center;
   z-index: 1000;
   padding: 0 20px;
@@ -27,7 +24,7 @@
 
 .navbar-container {
   display: flex;
-  justify-content: space-between; /* Ensure spacing between logo and menu */
+  justify-content: space-between;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -48,6 +45,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+  margin-left: auto;
 }
 
 .navbar-menu li {
@@ -66,24 +64,33 @@
   color: var(--teal-light);
 }
 
+/* Menu icon for smaller screens */
+.menu-icon {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 24px;
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon on smaller screens */
+  }
+
   .navbar-menu {
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: var(--teal-color);
-    width: 100%;
-    display: none;
+    display: none; /* Hide the full menu on smaller screens */
+  }
+}
+
+/* Ensure the menu icon is hidden on larger screens */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none !important; /* Force-hide menu icon on larger screens */
   }
 
-  .navbar-menu li {
-    margin-left: 0;
-    text-align: right;
-  }
-
-  .navbar-menu.active {
-    display: flex;
+  .navbar-menu {
+    display: flex !important; /* Ensure full menu is shown on larger screens */
   }
 }
 

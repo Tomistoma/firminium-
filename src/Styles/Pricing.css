@@ -24,21 +24,45 @@
   }
   
   .about-section {
-    background-color: rgba(40, 44, 52, 0.95);  /* Slightly transparent dark background */
-    padding: 40px;
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: white;
-}
-
-.about-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #FFD700;  /* Add yellow color to match the theme */
-}
+    background-color: #f4f4f4; /* Light background color for contrast */
+    padding: 50px 20px; /* Padding for inner spacing */
+    text-align: center; /* Center align the heading */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    margin: 20px auto; /* Center the section on the page */
+    max-width: 1000px; /* Limit width for larger screens */
+  }
+  
+  .about-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em; /* Larger font size for better readability */
+    font-weight: 700; /* Bold heading for emphasis */
+    color: #FFD700; /* Text color to match the theme */
+    margin: 0; /* Remove default margin */
+    padding-bottom: 20px; /* Add space below the heading */
+    border-bottom: 3px solid #FFD700; /* Yellow underline for emphasis */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-section h2 {
+      font-size: 2em; /* Slightly smaller on tablets */
+    }
+  
+    .about-section {
+      padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-section h2 {
+      font-size: 1.5em; /* Smaller font size for mobile devices */
+    }
+  
+    .about-section {
+      padding: 20px 10px; /* Less padding on mobile devices */
+    }
+  }
+  
   .pricing-card {
     font-family: 'Montserrat', sans-serif;
     background-color: rgba(40, 44, 52, 1);

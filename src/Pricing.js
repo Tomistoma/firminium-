@@ -17,7 +17,7 @@ const Pricing = () => {
       <Particles className="particles" options={particlesOptions} init={particlesInit} />
       <Navbar />
 <div className='about-section'>
-      <h2>Orientační ceník nabízených služeb</h2>
+      <h2>Vyberte si rozsah služeb dle vašeho rozpočtu</h2>
       </div>
 
 
@@ -83,7 +83,7 @@ const Pricing = () => {
           <div className="service-card">
             <FaBullhorn className="service-icon" />
             <h3>Marketing</h3>
-            <p className="service-price">500-2000 Kč/měsíc</p>
+            <p className="service-price">500 a více Kč/měsíc</p>
             <p className="service-description">Reklama Vaší stránky na Google, Instagramu a dalších sociálních sítích.</p>
           </div>
 
