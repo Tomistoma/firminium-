@@ -102,7 +102,7 @@ const handleSubmit = async (e) => {
     } else {
         try {
             // Send form data to the server as a POST request
-            const response = await fetch('http://localhost:5000/send-email', {
+            const response = await fetch('https://www.firminium.cz/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
