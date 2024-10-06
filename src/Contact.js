@@ -6,8 +6,40 @@ import particlesOptions from "./particles.json";
 import './Styles/Contact.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Contact() {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClick = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
+  
+      setOpen(false);
+    };
+
+    const action = (
+        <React.Fragment>
+          <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleClose}
+          >
+            <CloseIcon fontSize="small" />
+          </IconButton>
+        </React.Fragment>
+      );
+
+
     const particlesInit = useCallback(main => {
         loadFull(main);
     }, []);
@@ -84,7 +116,7 @@ const handleSubmit = async (e) => {
             // Check if the response is successful
             if (response.ok) {
                 console.log('Form Submitted', formData);
-                alert('Thank you for contacting us!');
+                handleClick();
                 // Reset form
                 setFormData({
                     name: '',
@@ -110,6 +142,43 @@ const handleSubmit = async (e) => {
         <div className="App">
             <Particles className="particles" options={particlesOptions} init={particlesInit} />
             <Navbar />
+            <Snackbar
+  open={open}
+  autoHideDuration={6000}
+  onClose={handleClose}
+  message="Byli jsme úspěšně kontaktováni, děkujeme."
+  action={
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+        style={{
+          color: 'white', // Close icon color
+        }}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  }
+  sx={{
+    '& .MuiSnackbarContent-root': {
+      backgroundColor: 'var(--teal-color)', // Match the background color with your design
+      color: '#282b33', // Text color to match the overall design
+      fontFamily: 'Montserrat, sans-serif', // Font family to match your design
+      fontWeight: 'bold',
+      borderRadius: '10px', // Adding rounded corners to match your overall design aesthetic
+      boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)', // Adding subtle shadow
+    },
+    '& .MuiSnackbarContent-message': {
+      fontSize: '1em', // Adjusting font size
+    },
+    '& .MuiSnackbarContent-action': {
+      marginLeft: 'auto', // Align the close button to the right
+    },
+  }}
+/>
 
             {/* Contact Form Section */}
             <div className="contact-form">
@@ -184,6 +253,7 @@ const handleSubmit = async (e) => {
         whileTap={{ scale: 0.9 }}
         type="submit"  // This ensures it acts as a submit button
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        onClick={handleClick}
     >
         Odeslat
     </motion.button>
